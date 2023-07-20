@@ -1,0 +1,44 @@
+@keyframes colors{
+    0%{background-color: black;}
+    25%{background-color: gray;}
+    50%{background-color: rgb(145, 105, 105);}
+    75%{background-color: rgb(171, 70, 70);}
+    100%{background-color: red;}
+}
+@keyframes tamanhos{
+
+    100%{width: 100vh;height: 50vh;color: #dada;}
+    0%{width: 10vh;height: 5vh;}
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vh;
+
+}
+.tudo{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.teste{
+    width: 100%;
+    background-color: black;
+    animation-direction: alternate-reverse;/*alternate-reverse faz a animação inversa,por exemplo aqui esta começando do 100% pro 0 */
+    animation: infinite colors 4s;/*declarar INFINITE na propriedade ANIMATION faz ela ficar em loop{obviamente}*/
+}
+.testeSize{
+    background-color: #dada;
+    animation: tamanhos 5s infinite alternate-reverse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
