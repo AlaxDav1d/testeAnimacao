@@ -6,6 +6,7 @@
     25%{
         transform: rotate(360deg);
         background-color: red;
+
     }
     50%{
          transform: rotate(180deg);
@@ -14,12 +15,18 @@
     100%{
         transform: rotate(360deg);
         background-color: purple;
+
         padding: 5px;
     }
 
 }
 @keyframes tamanhos{
-
+0%{
+    -webkit-text-fill-color: rgb(220, 26, 26);
+}
+100%{
+    -webkit-text-fill-color: black;
+}
 }
 *{
     padding: 0; 
@@ -40,13 +47,33 @@
 .teste{
     width: 1px;
     height: 1%;
-    position: relative;
+   
     display: flex;
     background-color: aquamarine;
     /*alternate-reverse faz a animação inversa,por exemplo aqui esta começando do 100% pro 0 */
     animation: infinite colors 10s  linear alternate;  /*declarar INFINITE na propriedade ANIMATION faz ela ficar em loop{obviamente}*/
 }
+.branco{
+    height: 300px;
+    width: 300px;
+    /*aparentemente dois objetos com posição absoluta ficam no centro*/
+    position: absolute;
 
+    /*webkit-text-stroke defini a linha em volta do texto
+    -webkit-text-stroke: 0.6px brown;
+*/
+    /*webkit-text-fill-color define a cor de dentro da letra
+    -webkit-text-fill-color: aqua;
+    */
+    /*webkit-filter: adiciona o efeito q eu escolher q estiver disponivel
+    -webkit-filter: blur(1px);
+*/
+    background:  -webkit-linear-gradient(45deg,black,white );
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+}
+
+/*abaixo eu estou fazendo um teste com before pra ver o que eu consigo fazer*/
 .teste::before{
     content: " ´";  
     width: 1px;
